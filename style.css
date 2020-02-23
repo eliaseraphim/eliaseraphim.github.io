@@ -32,12 +32,14 @@ body, html {
 
 .index_wrapper {
     height: 100vh;
-    border: 20px solid whitesmoke;
+    border: 3vh solid whitesmoke;
 }
 
 .col {
+    position: relative;
+    
     float: left;
-    height: calc(100vh -  40px);
+    height: 94vh;
 }
 
 .left {
@@ -56,13 +58,13 @@ body, html {
     clear: both;
 }
 
-.content {
+.col > .content {
     position: absolute;
     bottom: 0;
     right: 0;
 }
 
-/* --------------- INDEX LEFT COLUMN --------------- */
+/* -------------------- INDEX LEFT COLUMN -------------------- */
 
 
 .left > .content {
@@ -95,7 +97,9 @@ body, html {
 }
 
 
-/* --------------- INDEX RIGHT COLUMN --------------- */
+/* -------------------- INDEX RIGHT COLUMN -------------------- */
+
+/* --------------- Directory --------------- */
 
 
 .right > .content {
@@ -136,4 +140,63 @@ a {
 
 a:hover {
     background-color: #ffbd69;
+}
+
+/* --------------- SLIDESHOW --------------- */
+
+.slide-container {
+}
+
+.slide {
+    text-align: center;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    width: 350px;
+    
+    margin-bottom: 15vh;
+    margin-left: 1.5vw;
+    
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fe346e;
+    
+    transition: 0.5s;
+}
+
+.slide-content:hover {
+    background-color: #ffbd69;
+}
+
+.slide-content > h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    
+    padding-left: 15px;
+    
+    font-size: 2em;
+    letter-spacing: .7em
+}
+
+.slide-content > p {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    
+    font-size: 1em;
+    letter-spacing: .075em;
+}
+
+img {
+    max-height: 80vh;
+    
+    margin-top: 7vh;
+    margin-bottom: 7vh;
 }
