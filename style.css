@@ -1,0 +1,139 @@
+/*
+    Author: Elia Deppe
+    Email: elia.deppe7@gmail.com
+
+    COLOR PALLETTE
+        Dark Gunmental #1c2826
+        English Vermillion #d64550
+        Rajah #f7b05b
+        Stil de Grain Yellow #f7ce5b
+        Tuscan #dfd6a7
+
+        #381460 rgb(56,20,96)
+        #b21f66 rgb(178,31,102)
+        #fe346e rgb(254,52,110)
+        #ffbd69 rgb(255,189,105)
+*/
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Anonymous Pro';
+}
+
+
+/* ----------------------------------- INDEX ----------------------------------- */
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.index_wrapper {
+    height: 100vh;
+    border: 20px solid whitesmoke;
+}
+
+.col {
+    float: left;
+    height: calc(100vh -  40px);
+}
+
+.left {
+    width: 30%;
+    position: relative;
+}
+
+.right {
+    width: 70%;
+    position: relative;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* --------------- INDEX LEFT COLUMN --------------- */
+
+
+.left > .content {
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+.left h1, p {
+    color: #381460;
+    font-style: italic;
+}
+
+.content > h1 {
+    margin: 0;
+
+    text-align: end;
+
+    font-size: 3.5em;
+    letter-spacing: .15em;
+}
+
+.content > p {
+    margin-top: 10px;
+    margin-right: 5px;
+    
+    text-align: center;
+    
+    font-size: 1em;
+    letter-spacing: .3em;
+}
+
+
+/* --------------- INDEX RIGHT COLUMN --------------- */
+
+
+.right > .content {
+    margin-right: 50px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin: 0;
+    
+    list-style-type: none;
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    
+    font-size: 1.2em;
+    font-style: italic;
+    
+    letter-spacing: .75em;
+}
+
+a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 4px;
+    
+    background-color: #fe346e;
+    
+    color: #381460;
+    text-decoration: none;
+    
+    transition: 0.5s;
+}
+
+a:hover {
+    background-color: #ffbd69;
+}
