@@ -32,6 +32,7 @@ body, html {
 
 .index_wrapper {
     height: 100vh;
+    width: 100vw;
     border: 3vh solid whitesmoke;
 }
 
@@ -172,6 +173,61 @@ body, html {
 /* -------------------- INDEX COLUMN 2 -------------------- */
 
 .app_wrapper {
+    content: "";
+    display: table;
+    clear: both;
+    
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+}
+
+.name_wrapper {
+    width: 80%;
+    height: 15%;
+    
+    margin-top: 10vh;
+    margin-left: 10%;
+    
+    color: #ffbd69;
+    
+    padding: 1px;
+    
+    text-align: end;
+}
+
+.name_wrapper > h1 {
+    margin-top: 18%;
+    margin-bottom: 0;
+    margin-right: 2%;
+    
+    font-size: xx-large;
+    
+    letter-spacing: .5vw;
+}
+
+.name_wrapper > h2 {
+    margin-top: 4%;
+    margin-bottom: 0;
+    margin-right: 2%;
+    
+    font-size: large;
+    
+    letter-spacing: .3vw;
+}
+
+.app_wrapper > ul {
+    color: #381460;
+}
+
+.app_wrapper > ul > li {
+    letter-spacing: 8px;
+}
+
+/*
+
+.app_wrapper {
     position: absolute;
     top: 43.75%;
     left: 12.5%;
@@ -212,8 +268,30 @@ body, html {
     color: #fe346e;
 }
 
+*/
+
 /* -------------------- INDEX COLUMN 3 -------------------- */
 
+.img_wrapper {
+    position: absolute;
+    top: 5.25%;
+    left: 5%;
+    
+    height: 89.5%;
+    width: 90%;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.img_wrapper > img {
+    max-width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    
+    border-radius: 10px
+}
 
 /* -------------------- INDEX COLUMN 4 -------------------- */
 /* --------------- Directory --------------- */
