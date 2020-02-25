@@ -120,6 +120,31 @@ body, html {
 
 .dropdown_wrapper {
     margin-top: 8px;
+    
+    position: relative;
+    display: block;
+}
+
+.dropdown_content {
+    overflow: hidden;
+    
+    height: 0;
+    position: absolute;
+    width: auto;
+    
+    margin-top: 4px;
+    
+    transition: all 1.4s ease;
+}
+
+.dropdown_content a {
+    font-size: 1.6ch;
+    
+    display: block;
+}
+
+.dropdown_wrapper:hover .dropdown_content {
+    height: 200px;
 }
 
 .content > h1 {
@@ -145,6 +170,42 @@ body, html {
 
 /* -------------------- INDEX COLUMN 2 -------------------- */
 
+.app_wrapper {
+    position: absolute;
+    top: 43.75%;
+    left: 12.5%;
+    
+    display: block;
+    
+    height: 12.5%;
+    width: 75%;
+    
+    text-align: center;
+}
+
+.app_wrapper > h1, h2 {
+    color: #ffbd69;
+    
+    transition: 0.5s; 
+}
+
+.app_wrapper > h1 {
+    margin-top: 10%;
+    margin-bottom: 10px;
+    
+    font-size: xx-large;
+}
+
+.app_wrapper > h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    
+    font-size: large;
+}
+
+.three:hover .app_wrapper {
+    background-color: #b21f66;
+}
 
 /* -------------------- INDEX COLUMN 3 -------------------- */
 
