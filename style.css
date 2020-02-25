@@ -225,51 +225,6 @@ body, html {
     letter-spacing: 8px;
 }
 
-/*
-
-.app_wrapper {
-    position: absolute;
-    top: 43.75%;
-    left: 12.5%;
-    
-    display: block;
-    
-    height: 12.5%;
-    width: 75%;
-    
-    text-align: center;
-}
-
-.app_name, .app_description {
-    color: #ffbd69;
-    
-    transition: 0.5s; 
-}
-
-.app_wrapper > h1 {
-    margin-top: 10%;
-    margin-bottom: 10px;
-    
-    font-size: xx-large;
-}
-
-.app_wrapper > h2 {
-    margin-top: 10px;
-    margin-bottom: 0;
-    
-    font-size: large;
-}
-
-.app_wrapper:hover .app_name {
-    color: #fe346e;
-}
-
-.app_wrapper:hover .app_description {
-    color: #fe346e;
-}
-
-*/
-
 /* -------------------- INDEX COLUMN 3 -------------------- */
 
 .img_wrapper {
@@ -285,6 +240,7 @@ body, html {
 }
 
 .img_wrapper > img {
+    max-height: 100%;
     max-width: 100%;
     
     margin: 0;
