@@ -42,14 +42,20 @@ body, html {
     height: 94vh;
 }
 
-.left {
+.one {
     width: 30%;
-    position: relative;
 }
 
-.right {
-    width: 70%;
-    position: relative;
+.two {
+    width: 22.5%;
+}
+
+.three {
+    width: 30%;
+}
+
+.four {
+    width: 17.5%;
 }
 
 .row:after {
@@ -58,23 +64,62 @@ body, html {
     clear: both;
 }
 
-.col > .content {
+.one > .content {
+    display: inline-block;
+    
     position: absolute;
     bottom: 0;
     right: 0;
-}
-
-/* -------------------- INDEX LEFT COLUMN -------------------- */
-
-
-.left > .content {
-    margin-right: 25px;
+    
+    margin-right: 10px;
     margin-bottom: 15px;
 }
 
-.left h1, p {
+.four > .content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* -------------------- INDEX COLUMN ONE -------------------- */
+
+.one h1, p, a {
     color: #381460;
     font-style: italic;
+}
+
+.sidebar {
+    content: "";
+    display: table;
+    clear: both;
+    
+    margin-top: 4px;
+    
+    position: relative;
+}
+
+.sidebar > a, div {    
+    font-size: 1.95ch;
+    font-style: italic;
+    
+    letter-spacing: .2vw;
+}
+
+.sidebar a {
+    color: #ffbd69;
+    background-color: #381460;
+}
+
+.sidebar a:hover {
+    background-color: #b21f66;
+}
+
+.dropdown_wrapper {
+    margin-top: 8px;
 }
 
 .content > h1 {
@@ -82,29 +127,35 @@ body, html {
 
     text-align: end;
 
-    font-size: 3.5em;
-    letter-spacing: .15em;
+    font-size: xxx-large;
+    letter-spacing: .3vw;
 }
 
 .content > p {
-    margin-top: 10px;
-    margin-right: 5px;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    margin-right: .2vw;
     
-    text-align: center;
+    text-align: end;
     
-    font-size: 1em;
-    letter-spacing: .3em;
+    font-size: medium;
+    letter-spacing: .3vw;
 }
 
 
-/* -------------------- INDEX RIGHT COLUMN -------------------- */
+/* -------------------- INDEX COLUMN 2 -------------------- */
 
+
+/* -------------------- INDEX COLUMN 3 -------------------- */
+
+
+/* -------------------- INDEX COLUMN 4 -------------------- */
 /* --------------- Directory --------------- */
 
 
-.right > .content {
-    margin-right: 50px;
-    margin-bottom: 15px;
+.four > .content {
+    margin-right: .5vw;
+    margin-bottom: 2vh;
 }
 
 ul {
@@ -114,14 +165,14 @@ ul {
 }
 
 li {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 2.5vh;
+    margin-bottom: 0;
     margin-left: 0;
     
-    font-size: 1.2em;
+    font-size: large;
     font-style: italic;
     
-    letter-spacing: .75em;
+    letter-spacing: .6vw;
 }
 
 a {
@@ -140,63 +191,4 @@ a {
 
 a:hover {
     background-color: #ffbd69;
-}
-
-/* --------------- SLIDESHOW --------------- */
-
-.slide-container {
-}
-
-.slide {
-    text-align: center;
-}
-
-.slide-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    
-    width: 350px;
-    
-    margin-bottom: 15vh;
-    margin-left: 1.5vw;
-    
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: #fe346e;
-    
-    transition: 0.5s;
-}
-
-.slide-content:hover {
-    background-color: #ffbd69;
-}
-
-.slide-content > h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 0;
-    margin-right: 0;
-    
-    padding-left: 15px;
-    
-    font-size: 2em;
-    letter-spacing: .7em
-}
-
-.slide-content > p {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    
-    font-size: 1em;
-    letter-spacing: .075em;
-}
-
-img {
-    max-height: 80vh;
-    
-    margin-top: 7vh;
-    margin-bottom: 7vh;
 }
