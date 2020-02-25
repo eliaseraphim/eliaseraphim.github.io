@@ -51,6 +51,7 @@ body, html {
 }
 
 .three {
+    border: 10px dotted #b21f66;
     width: 30%;
 }
 
@@ -183,7 +184,7 @@ body, html {
     text-align: center;
 }
 
-.app_wrapper > h1, h2 {
+.app_name, .app_description {
     color: #ffbd69;
     
     transition: 0.5s; 
@@ -203,8 +204,12 @@ body, html {
     font-size: large;
 }
 
-.three:hover .app_wrapper {
-    background-color: #b21f66;
+.app_wrapper:hover .app_name {
+    color: #fe346e;
+}
+
+.app_wrapper:hover .app_description {
+    color: #fe346e;
 }
 
 /* -------------------- INDEX COLUMN 3 -------------------- */
