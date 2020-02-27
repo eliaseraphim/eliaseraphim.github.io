@@ -3,12 +3,6 @@
     Email: elia.deppe7@gmail.com
 
     COLOR PALLETTE
-        Dark Gunmental #1c2826
-        English Vermillion #d64550
-        Rajah #f7b05b
-        Stil de Grain Yellow #f7ce5b
-        Tuscan #dfd6a7
-
         #381460 rgb(56,20,96)
         #b21f66 rgb(178,31,102)
         #fe346e rgb(254,52,110)
@@ -89,7 +83,7 @@ body, html {
 
 /* -------------------- INDEX COLUMN ONE -------------------- */
 
-.one h1, p, a {
+.one h1, h2, p, a {
     color: #381460;
     font-style: italic;
 }
@@ -158,6 +152,17 @@ body, html {
     letter-spacing: .3vw;
 }
 
+.content > h2 {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    margin-right: .2vw;
+    
+    text-align: end;
+    
+    font-size: x-large;
+    letter-spacing: .3vw;
+}
+
 .content > p {
     margin-top: 1vh;
     margin-bottom: 2vh;
@@ -215,6 +220,8 @@ body, html {
     font-size: large;
     
     letter-spacing: .3vw;
+    
+    color: #ffbd69;
 }
 
 .app_wrapper > ul {
@@ -240,8 +247,8 @@ body, html {
 }
 
 .img_wrapper > img {
-    max-height: 100%;
     max-width: 100%;
+    height: auto;
     
     margin: 0;
     padding: 0;
@@ -250,6 +257,7 @@ body, html {
 }
 
 /* -------------------- INDEX COLUMN 4 -------------------- */
+
 /* --------------- Directory --------------- */
 
 
@@ -291,4 +299,91 @@ a {
 
 a:hover {
     background-color: #ffbd69;
+}
+
+
+/* ----------------------------------- BIO ----------------------------------- */
+
+/* -------------------- INDEX COLUMN 2-3 -------------------- */
+
+.two_three {
+    width: 52.5%;
+    
+    float: top;
+}
+
+.two_three:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.education {
+    position: relative;
+    
+    width: 100%;
+    height: 35%;
+}
+
+.work {
+    position: relative;
+    
+    width: 100%;
+    height: 65%;
+}
+
+.bio_wrapper {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding right: 0;
+    padding-left: 2vw;
+}
+
+.bio_name {
+    margin: 0;
+    
+    font-size: x-large;
+    text-align: end;
+    
+    letter-spacing: .5vw;
+    
+    color: #ffbd69;
+    
+    transition: .5s;
+}
+
+.education:hover .bio_name {
+    color: #fe346e;
+}
+
+.work:hover .bio_name {
+    color: #fe346e;
+}
+
+.row > ul {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+}
+
+.education > ul {
+}
+
+.work > ul {
+}
+
+.row > ul > li {
+    margin: 0;
+    padding: 4px;
+    
+    text-align: end;
+    
+    letter-spacing: .4vw;
+    
+    color: #381460;
+    background-color: #fe346e;
 }
