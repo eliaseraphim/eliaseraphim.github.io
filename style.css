@@ -364,26 +364,26 @@ a:hover {
     color: #fe346e;
 }
 
-.row > ul {
+.bio_information {
     position: absolute;
     top: 10vh;
     right: 0;
-}
-
-.education > ul {
-}
-
-.work > ul {
-}
-
-.row > ul > li {
-    margin: 0;
-    padding: 4px;
+    
+    display: table;
+    
+    float: right;
     
     text-align: end;
+}
+
+p { 
+    display: inline-block;
     
-    letter-spacing: .4vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
     
+    padding: 4px;
+    
+    background-color: #ffbd69;
     color: #381460;
-    background-color: #fe346e;
 }
