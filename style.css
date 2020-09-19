@@ -14,7 +14,8 @@
 ***************************************************************/
 
 * {
-    font-family: 'Anonymous Pro';
+  font-family: 'Anonymous Pro';
+  box-sizing: border-box;
 }
 
 body, html {
@@ -25,11 +26,8 @@ body, html {
 /* ----------------------------------- INDEX ----------------------------------- */
 
 .index {
-  box-sizing: border-box;
-  
   height: 100vh;
   width: 100vw;
-  border: 3vh solid whitesmoke;
 }
 
 /* 
@@ -40,16 +38,24 @@ body, html {
 .index .col {
   position: relative;
   
+  height: 100vh;
+  min-height: 850px;
+  
   float: left;
-  height: 94vh;
+  
+  border: 25px solid whitesmoke;
 }
 
 .index .one {
-  width: 35%;
+  display: inline;
+  
+  width: 30%;
+  min-width: 600px;
 }
 
 .index .two {
-  width: 70%%;
+  width: 65%;
+  min-width: 900px;
 }
 
 /* clear floats after the columns*/
@@ -72,40 +78,40 @@ mark.magenta_highlight {
 
 /* --------- INDEX COLUMN ONE | NAVIGATION -------- */
 
-.one > .navigation_wrapper {
+.navigation_wrapper {
   position: absolute;
+  
   top: 0;
   left: 0;
   
   display: block;
 }
 
-.one > .navigation_wrapper > p {
+.navigation_wrapper > p {
   cursor: default;
   
   margin: 0;
   
   font-size: xx-large;
   font-style: italic;
-  
   color: #ffbd69;
   
-  padding: 10px 25px 10px 25px;
+  padding: 15px 30px 15px 30px;
   
   transition: background-color 1.4s ease;
 }
 
-.one .dropdown_content {
+.dropdown_content {
   overflow: hidden;
   
   position: absolute;
   height: 0;
-  width: 90%;
+  width: 100%;
   
   transition: height 1.4s ease;
 }
 
-.one .dropdown_content > a {
+.dropdown_content > a {
   display: block;
   
   font-size: x-large;
@@ -115,80 +121,69 @@ mark.magenta_highlight {
   
   background-color: #381460;
   
-  padding: 10px 10px 10px 15px;
+  padding: 10px 15px 10px 15px;
   
   transition: background-color 1.4s ease;
 }
 
-.one .dropdown_content > a:hover {
+.dropdown_content > a:hover {
   background-color: #fe346e;
 }
 
-.one .navigation_wrapper:hover .dropdown_content {
-  height: 230px;
+.navigation_wrapper > p:hover {
+  background-color: #fe346e;
 }
 
-.one > .navigation_wrapper > p:hover {
-  background-color: #fe346e;
+.navigation_wrapper:hover .dropdown_content {
+  height: 250px;
 }
 
 /* ---------- INDEX COLUMN ONE | CONTENT ---------- */
 
-
-
-
+/* align content container to the bottom right, float items to the right*/
 .one > .content {
-  display: block;
-  
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-.one > .content > * {
-  display: block;
-  float: right;
-  
+.content > a, h1, h2 {
   margin-right: 10px;
+  
+  float: right;
 }
 
-.one > .content > a > img {
-  display:block;
-  
-  margin-right: 30px;
-  
-  height: 200px;
-  width: 200px;
-  
+/* profile imag e*/
+.content  img {
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
-  
-  position: absolute;
-  bottom: 15vh;
-  right: 0;
 }
 
-.one > .content h1, h2 {
-  cursor: default;
-  
-  font-style: italic;
-  color: #381460;
-  
-  text-align: end;
-  
-  margin-bottom: 30px;
+.content > a {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 15px;
 }
 
-.one > .content > h1 {
+.content > h1 {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
   
-  margin-bottom: 0;
-    
+  letter-spacing: .25em;
+  
   font-size: xxx-large;
-  letter-spacing: .4em;
+  font-style: italic;
 }
 
-.one > .content > h2 {
-  font-size: x-large;
-  letter-spacing: .12em;
+.content > h2 {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  
+  font-size: xx-large;
+  font-style: italic;
 }
 
 /* clear floats after the headings*/
