@@ -1,389 +1,346 @@
-/*
-    Author: Elia Deppe
-    Email: elia.deppe7@gmail.com
+/*************************************************************** 
+  author: elia atwater
+  file: style.css
+  description: stylesheet for personal website
+***************************************************************/
 
-    COLOR PALLETTE
+/*************************************************************** 
+  Color Palette
+        COLOR PALLETTE
         #381460 rgb(56,20,96)
         #b21f66 rgb(178,31,102)
         #fe346e rgb(254,52,110)
         #ffbd69 rgb(255,189,105)
-*/
-
+***************************************************************/
 
 * {
-    box-sizing: border-box;
     font-family: 'Anonymous Pro';
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+}
 
 /* ----------------------------------- INDEX ----------------------------------- */
 
-
-body, html {
-    margin: 0;
-    padding: 0;
+.index {
+  box-sizing: border-box;
+  
+  height: 100vh;
+  width: 100vw;
+  border: 3vh solid whitesmoke;
 }
 
-.index_wrapper {
-    height: 100vh;
-    width: 100vw;
-    border: 3vh solid whitesmoke;
+/* 
+  need position relative in order for content to use position absolute, since absolute is positioned
+    relative to the nearest positioned ancestor (anything not static). therefore, we need to set
+    col since it is the ancestor I wish to be relative to.
+*/
+.index .col {
+  position: relative;
+  
+  float: left;
+  height: 94vh;
 }
 
-.col {
-    position: relative;
-    
-    float: left;
-    height: 94vh;
+.index .one {
+  width: 35%;
 }
 
-.one {
-    width: 30%;
+.index .two {
+  width: 70%%;
 }
 
-.two {
-    width: 22.5%;
+/* clear floats after the columns*/
+.index > .row:after{
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.three {
-    border: 10px dotted #b21f66;
-    width: 30%;
-}
-
-.four {
-    width: 17.5%;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.one > .content {
-    display: inline-block;
-    
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    
-    margin-right: 10px;
-    margin-bottom: 15px;
-}
-
-.four > .content {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    
-    margin-right: 10px;
-    margin-bottom: 15px;
+mark.magenta_highlight {
+  color: #381460;
+  background-color: #b21f66;
+  padding-left: 15px;
 }
 
 
 /* -------------------- INDEX COLUMN ONE -------------------- */
 
-.one h1, h2, p, a {
-    color: #381460;
-    font-style: italic;
+
+
+/* --------- INDEX COLUMN ONE | NAVIGATION -------- */
+
+.one > .navigation_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  display: block;
 }
 
-.sidebar {
-    content: "";
-    display: table;
-    clear: both;
-    
-    margin-top: 4px;
-    
-    position: relative;
+.one > .navigation_wrapper > p {
+  cursor: default;
+  
+  margin: 0;
+  
+  font-size: xx-large;
+  font-style: italic;
+  
+  color: #ffbd69;
+  
+  padding: 10px 25px 10px 25px;
+  
+  transition: background-color 1.4s ease;
 }
 
-.sidebar > a, div {    
-    font-size: 1.95ch;
-    font-style: italic;
-    
-    letter-spacing: .2vw;
+.one .dropdown_content {
+  overflow: hidden;
+  
+  position: absolute;
+  height: 0;
+  width: 90%;
+  
+  transition: height 1.4s ease;
 }
 
-.sidebar a {
-    color: #ffbd69;
-    background-color: #381460;
+.one .dropdown_content > a {
+  display: block;
+  
+  font-size: x-large;
+  font-style: italic;
+  color: #ffbd69;
+  text-decoration: none;
+  
+  background-color: #381460;
+  
+  padding: 10px 10px 10px 15px;
+  
+  transition: background-color 1.4s ease;
 }
 
-.sidebar a:hover {
-    background-color: #b21f66;
+.one .dropdown_content > a:hover {
+  background-color: #fe346e;
 }
 
-.dropdown_wrapper {
-    margin-top: 8px;
-    
-    position: relative;
-    display: block;
+.one .navigation_wrapper:hover .dropdown_content {
+  height: 230px;
 }
 
-.dropdown_content {
-    overflow: hidden;
-    
-    height: 0;
-    position: absolute;
-    width: auto;
-    
-    margin-top: 4px;
-    
-    transition: all 1.4s ease;
+.one > .navigation_wrapper > p:hover {
+  background-color: #fe346e;
 }
 
-.dropdown_content a {
-    font-size: 1.6ch;
-    
-    display: block;
+/* ---------- INDEX COLUMN ONE | CONTENT ---------- */
+
+
+
+
+.one > .content {
+  display: block;
+  
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-.dropdown_wrapper:hover .dropdown_content {
-    height: 200px;
+.one > .content > * {
+  display: block;
+  float: right;
+  
+  margin-right: 10px;
 }
 
-.content > h1 {
-    margin: 0;
-
-    text-align: end;
-
-    font-size: xxx-large;
-    letter-spacing: .3vw;
+.one > .content > a > img {
+  display:block;
+  
+  margin-right: 30px;
+  
+  height: 200px;
+  width: 200px;
+  
+  border-radius: 50%;
+  
+  position: absolute;
+  bottom: 15vh;
+  right: 0;
 }
 
-.content > h2 {
-    margin-top: 1vh;
-    margin-bottom: 2vh;
-    margin-right: .2vw;
-    
-    text-align: end;
-    
-    font-size: x-large;
-    letter-spacing: .3vw;
+.one > .content h1, h2 {
+  cursor: default;
+  
+  font-style: italic;
+  color: #381460;
+  
+  text-align: end;
+  
+  margin-bottom: 30px;
 }
 
-.content > p {
-    margin-top: 1vh;
-    margin-bottom: 2vh;
-    margin-right: .2vw;
+.one > .content > h1 {
+  
+  margin-bottom: 0;
     
-    text-align: end;
-    
-    font-size: medium;
-    letter-spacing: .3vw;
+  font-size: xxx-large;
+  letter-spacing: .4em;
 }
 
-
-/* -------------------- INDEX COLUMN 2 -------------------- */
-
-.app_wrapper {
-    content: "";
-    display: table;
-    clear: both;
-    
-    width: 100%;
-    height: 100%;
-    
-    position: relative;
+.one > .content > h2 {
+  font-size: x-large;
+  letter-spacing: .12em;
 }
 
-.name_wrapper {
-    width: 80%;
-    height: 15%;
-    
-    margin-top: 10vh;
-    margin-left: 10%;
-    
-    color: #ffbd69;
-    
-    padding: 1px;
-    
-    text-align: end;
-}
-
-.name_wrapper > h1 {
-    margin-top: 18%;
-    margin-bottom: 0;
-    margin-right: 2%;
-    
-    font-size: xx-large;
-    
-    letter-spacing: .5vw;
-}
-
-.name_wrapper > h2 {
-    margin-top: 4%;
-    margin-bottom: 0;
-    margin-right: 2%;
-    
-    font-size: large;
-    
-    letter-spacing: .3vw;
-    
-    color: #ffbd69;
-}
-
-.app_wrapper > ul {
-    color: #381460;
-}
-
-.app_wrapper > ul > li {
-    letter-spacing: 8px;
-}
-
-/* -------------------- INDEX COLUMN 3 -------------------- */
-
-.img_wrapper {
-    position: absolute;
-    top: 5.25%;
-    left: 5%;
-    
-    height: 89.5%;
-    width: 90%;
-    
-    margin: 0;
-    padding: 0;
-}
-
-.img_wrapper > img {
-    max-width: 100%;
-    height: auto;
-    
-    margin: 0;
-    padding: 0;
-    
-    border-radius: 10px
-}
-
-/* -------------------- INDEX COLUMN 4 -------------------- */
-
-/* --------------- Directory --------------- */
-
-
-.four > .content {
-    margin-right: .5vw;
-    margin-bottom: 2vh;
-}
-
-ul {
-    margin: 0;
-    
-    list-style-type: none;
-}
-
-li {
-    margin-top: 2.5vh;
-    margin-bottom: 0;
-    margin-left: 0;
-    
-    font-size: large;
-    font-style: italic;
-    
-    letter-spacing: .6vw;
-}
-
-a {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 10px;
-    padding-right: 4px;
-    
-    background-color: #fe346e;
-    
-    color: #381460;
-    text-decoration: none;
-    
-    transition: 0.5s;
-}
-
-a:hover {
-    background-color: #ffbd69;
+/* clear floats after the headings*/
+.one::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 
-/* ----------------------------------- BIO ----------------------------------- */
+/* -------------------- INDEX COLUMN TWO -------------------- */
 
-/* -------------------- INDEX COLUMN 2-3 -------------------- */
+/* ----------- INDEX COLUMN TWO | GRID ----------- */
 
-.two_three {
-    width: 52.5%;
-    
-    float: top;
+.grid_container {
+  margin: 20px 20px 20px 20px;
+  
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
 }
 
-.two_three:after {
-    content: "";
-    display: block;
-    clear: both;
+@keyframes tileflow {
+  from {background-color: #381460;}
+  to {background-color: #fe346e;}
 }
 
-.education {
-    position: relative;
-    
-    width: 100%;
-    height: 35%;
+.grid-item {
+  display: block;
+  height: 17.3vh;
+  width: 11.71622vw;
+  
+  animation-name: tileflow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  
+  transition: transform .75s ease;
 }
 
-.work {
-    position: relative;
-    
-    width: 100%;
-    height: 65%;
+.grid-item:hover {
+  transform: scale(1.4);
 }
 
-.bio_wrapper {
-    position: absolute;
-    top: 2vh;
-    left: 2vw;
-    
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding right: 0;
-    padding-left: 2vw;
+/* ROW 1 */
+
+.r1c1 {
+  animation-delay: 0s;
 }
 
-.bio_name {
-    margin: 0;
-    
-    font-size: x-large;
-    text-align: end;
-    
-    letter-spacing: .5vw;
-    
-    color: #ffbd69;
-    
-    transition: .5s;
+.r1c2 {
+  animation-delay: -.16s;
 }
 
-.education:hover .bio_name {
-    color: #fe346e;
+.r1c3 {
+  animation-delay: -.32s;
 }
 
-.work:hover .bio_name {
-    color: #fe346e;
+.r1c4 {
+  animation-delay: -.48s;
 }
 
-.bio_information {
-    position: absolute;
-    top: 10vh;
-    right: 0;
-    
-    display: table;
-    
-    float: right;
-    
-    text-align: end;
+.r1c5 {
+  animation-delay: -.64s;
 }
 
-p { 
-    display: inline-block;
-    
-    margin-top: 5px;
-    margin-bottom: 5px;
-    
-    padding: 4px;
-    
-    background-color: #ffbd69;
-    color: #381460;
+/* ROW 2 */
+
+.r2c1 {
+  animation-delay: -.8s;
+}
+
+.r2c2 {
+  animation-delay: -.96s;
+}
+
+.r2c3 {
+  animation-delay: -1.12s;
+}
+
+.r2c4 {
+  animation-delay: -1.28s;
+}
+
+.r2c5 {
+  animation-delay: -1.44s;
+}
+
+/* ROW 3 */
+
+.r3c1 {
+  animation-delay: -1.6s;
+}
+
+.r3c2 {
+  animation-delay: -1.76s;
+}
+
+.r3c3 {
+  animation-delay: -1.92s;
+}
+
+.r3c4 {
+  animation-delay: -2.08s;
+}
+
+.r3c5 {
+  animation-delay: -2.24s;
+}
+
+/* ROW 4 */
+
+.r4c1 {
+  animation-delay: -2.4s;
+}
+
+.r4c2 {
+  animation-delay: -2.56s;
+}
+
+.r4c3 {
+  animation-delay: -2.72s;
+}
+
+.r4c4 {
+  animation-delay: -2.88s;
+}
+
+.r4c5 {
+  animation-delay: -3.04s;
+}
+
+/* ROW 5 */
+
+.r5c1 {
+  animation-delay: -3.2s;
+}
+
+.r5c2 {
+  animation-delay: -3.36s;
+}
+
+.r5c3 {
+  animation-delay: -3.52s;
+}
+
+.r5c4 {
+  animation-delay: -3.68s;
+}
+
+.r5c5 {
+  animation-delay: -3.84s;
 }
