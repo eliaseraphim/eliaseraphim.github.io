@@ -29,7 +29,6 @@ body, html {
   height: 100vh;
   width: 100vw;
 }
-
 /* 
   need position relative in order for content to use position absolute, since absolute is positioned
     relative to the nearest positioned ancestor (anything not static). therefore, we need to set
@@ -37,25 +36,27 @@ body, html {
 */
 .index .col {
   position: relative;
+  float: left;
   
   height: 100vh;
   min-height: 850px;
-  
-  float: left;
   
   border: 25px solid whitesmoke;
 }
 
 .index .one {
-  display: inline;
+  display: block;
   
   width: 30%;
   min-width: 600px;
 }
 
 .index .two {
+  display: block;
+  
+  min-height: 850px;
   width: 65%;
-  min-width: 900px;
+  min-width: 950px;
 }
 
 /* clear floats after the columns*/
@@ -199,10 +200,10 @@ mark.magenta_highlight {
 /* ----------- INDEX COLUMN TWO | GRID ----------- */
 
 .grid_container {
-  margin: 20px 20px 20px 20px;
+  margin-left: 50px;
   
   display: grid;
-  grid-gap: 10px;
+  
   grid-template-columns: auto auto auto auto auto;
   grid-template-rows: auto auto auto auto auto;
 }
@@ -214,8 +215,11 @@ mark.magenta_highlight {
 
 .grid-item {
   display: block;
-  height: 17.3vh;
-  width: 11.71622vw;
+  min-height: 184px;
+  width: inherit;
+  
+  margin: 0px;
+  padding: 0px;
   
   animation-name: tileflow;
   animation-duration: 4s;
