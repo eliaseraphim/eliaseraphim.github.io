@@ -25,16 +25,17 @@ body, html {
 
 /* ----------------------------------- INDEX ----------------------------------- */
 
-.index {
+.body {
   height: 100vh;
-  width: 100vw;
+  width: 100vh;
 }
+
 /* 
   need position relative in order for content to use position absolute, since absolute is positioned
     relative to the nearest positioned ancestor (anything not static). therefore, we need to set
     col since it is the ancestor I wish to be relative to.
 */
-.index .col {
+.col {
   position: relative;
   float: left;
   
@@ -44,14 +45,14 @@ body, html {
   border: 25px solid whitesmoke;
 }
 
-.index .one {
+.one {
   display: block;
-  
+  min-height: 850px;
   width: 30%;
   min-width: 600px;
 }
 
-.index .two {
+.two {
   display: block;
   
   min-height: 850px;
@@ -66,13 +67,24 @@ body, html {
   clear: both;
 }
 
+.bio > .row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
 mark.magenta_highlight {
   color: #381460;
   background-color: #b21f66;
   padding-left: 15px;
 }
 
-
+mark.yellow_highlight {
+  color: #b21f66;
+  background-color: #ffbd69;
+  padding: 10px 25px 10px 25px;
+  
+}
 /* -------------------- INDEX COLUMN ONE -------------------- */
 
 
@@ -148,7 +160,7 @@ mark.magenta_highlight {
   right: 0;
 }
 
-.content > a, h1, h2 {
+.content > * {
   margin-right: 10px;
   
   float: right;
@@ -199,7 +211,7 @@ mark.magenta_highlight {
 
 /* ----------- INDEX COLUMN TWO | GRID ----------- */
 
-.grid_container {
+.index .grid_container {
   display: grid;
   
   margin-left: 20px;
@@ -212,11 +224,13 @@ mark.magenta_highlight {
 }
 
 @keyframes tileflow {
-  from {background-color: #381460;}
-  to {background-color: #fe346e;}
+  0%    {background-color:#381460;}
+  33%   {background-color:#b21f66;}
+  66%   {background-color:#fe346e;}
+  100%  {background-color:#ffbd69;}
 }
 
-.grid-item {
+.index .grid-item {
   display: block;
   
   animation-name: tileflow;
@@ -224,13 +238,8 @@ mark.magenta_highlight {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
-  
-  transition: transform .75s ease;
 }
 
-.grid-item:hover {
-  transform: scale(1.4);
-}
 
 /* ROW 1 */
 
@@ -340,4 +349,115 @@ mark.magenta_highlight {
 
 .r5c5 {
   animation-delay: -3.84s;
+}
+
+
+/* ------------------------------------ BIO ------------------------------------ */
+
+.bio .grid_container {
+  display: grid;
+  
+  margin-top: 25px;
+  
+  width: 100%;
+  height: 100%;
+  
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50% 50%;
+}
+
+.bio .grid-item {
+  display: block;
+}
+
+#bioG1 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+#bioG2 {
+  grid-row-start: 1;
+  grid-column-start: span 2;
+  
+  margin-left: -75px;
+  margin-top: 165px;
+}
+
+#bioG3 {
+  grid-row-start: 2;
+  grid-column-start: 4;
+  
+  text-align: start;
+}
+
+#bioG4 {
+  grid-row-start: 2;
+  grid-column-start: span 3;
+  
+  text-align: end;
+  
+  margin-top: 160px;
+  margin-right: 40px;
+}
+
+#bioG1 > div {
+  width: 60%;
+  height: 95%;
+
+  box-shadow: 25px 25px #381460;
+  
+  margin-top: 25px
+}
+
+#bioG1 > div > h3 {
+  position: absolute;
+  
+  top: 135px;
+  left: 50px;
+  
+  margin: 0;
+  
+  font-size: xxx-large;
+  font-style: italic;
+}
+
+#bioG3 > div {
+  width: 60%;
+  height: 95%;
+
+  box-shadow: -25px -25px #381460;
+  
+  margin-top: -25px;
+}
+
+#bioG3 > div > h3 {
+  position: absolute;
+  
+  bottom: 135px;
+  right: 160px;
+  
+  margin: 0;
+  
+  font-size: xxx-large;
+  font-style: italic;
+}
+
+#bioG2 > h1 > a {
+  color: #381460;
+  
+  transition: color .8s ease;
+}
+
+.yellow_highlight > a {
+  color: #381460;
+  
+  transition: color .8s ease;
+}
+
+#bioG2 > h1 > a:hover {
+  color: #fe346e;
+}
+
+.yellow_highlight > a:hover {
+  color: #fe346e;
 }
