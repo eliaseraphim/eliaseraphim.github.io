@@ -354,6 +354,11 @@ mark.yellow_highlight {
 
 /* ------------------------------------ BIO ------------------------------------ */
 
+
+.square_item {
+  position: absolute;
+}
+
 .bio .grid_container {
   display: grid;
   
