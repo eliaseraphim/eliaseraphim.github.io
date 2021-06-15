@@ -414,6 +414,10 @@ mark.yellow_highlight {
     z-index: 3;
 }
 
+.about .row h1 {
+    font-size: xxx-large;
+}
+
 #about > h1 {
     margin: 0px 10px;
     
@@ -422,14 +426,16 @@ mark.yellow_highlight {
     z-index: 3;
 }
 
+.about .row p {
+    font-size: x-large;
+}
+
 #about > p {
     margin: 0px 10px;
     
     grid-row: 5 / span 3;
     grid-column: 1 / span 4;
     z-index: 3;
-    
-    font-size: large;
 }
 
 #about > p a {
@@ -575,16 +581,16 @@ mark.yellow_highlight {
 }
 
 #work > h1 {
-    margin: 0;
+    margin: 15px 15px;
     
     grid-row: 4 / span 1;
-    grid-column: 4 / span 2;
+    grid-column: 3 / span 2;
     
     z-index: 3;
 }
 
 #work > p {
-    margin: 15px 65px;
+    margin: 15px 15px;
     
     grid-row: 5 / span 4;
     grid-column: 3 / span 6;
