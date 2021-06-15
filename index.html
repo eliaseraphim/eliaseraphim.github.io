@@ -22,61 +22,65 @@
 
 <body class="index" style="background-color: whitesmoke">
     <div class="row"> 
-      <!-- Column 1 -->
-      <div class="col one" style="background-color: #ffbd69">
-        
-        <div class="navigation_wrapper" style="background-color: #381460">
-          <p>+ navigation</p>
-          <div class="dropdown_content">
-            <a href="./index.html" id="test">&nbsp;&nbsp;>> index</a>
-            <a href="./bio.html">&nbsp;&nbsp;>> bio</a>
-            <a href="#">&nbsp;&nbsp;>> projects</a>
-            <a href="#">&nbsp;&nbsp;>> skills</a>
-            <a href="#">&nbsp;&nbsp;>> contact</a>
-          </div>
+        <!-- Column 1 -->
+        <div class="col one" style="background-color: #ffbd69">
+            <!-- Navigation Bar -->
+            <ul class="navigation_wrapper">
+                <li><a href="#" id="test">navigation</a></li>
+                <li><ul class="dropdown_content">
+                        <li><a href="./index.html">./index</a></li>
+                        <li><a href="./about.html">./about</a></li>
+                        <li><a href="#">./projects</a></li>
+                        <li><a href="#">./skills</a></li>
+                        <li><a href="#">./contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <h4 class='path'>./index.html</h4>
+            <!-- Profile Photo -->
+            <div class='row' id='photo'>
+                <!-- Picrewの「character」でつくったよ！ https://picrew.me/share?cd=vcQauzSoob #Picrew #character -->
+                <img src="./img/download20210601205730.png">
+            </div>
+            <!-- User Info -->
+            <div class='row' id='info'>
+                <h1><mark class='magenta_highlight'>elia atwater</mark></h1>
+                <h2>teacher - <a href='https://www.codeintheschools.org/'>code in the schools</a></h2>
+                <h3>software / web / app developer</h3>
+            </div>
         </div>
-        
-        <!-- content in column 1 -->
-        <div class="content">
-          <a href='./index.html'><img src="./img/download20200904004658.png"></a>
-          <h1><mark class="magenta_highlight">elia atwater</mark></h1>
-          <h2>software / web / app developer</h2>
-        </div>
-      </div>
 
-      <!-- CHANGE GRADIENT TO MATCH THE 4 COLOR VERSION -->
-      <!-- Column 2 -->
-      <div class="col two" style="background-color: transparent">
-        <div class="grid_container">
-          <div class="grid-item r1c1" style="background-color: #381460"></div>
-          <div class="grid-item r1c2" style="background-color: #3d1460"></div>
-          <div class="grid-item r1c3" style="background-color: #421460"></div>
-          <div class="grid-item r1c4" style="background-color: #471560"></div>
-          <div class="grid-item r1c5" style="background-color: #4c1561"></div>
-          <div class="grid-item r2c1" style="background-color: #511661"></div>
-          <div class="grid-item r2c2" style="background-color: #561661"></div>
-          <div class="grid-item r2c3" style="background-color: #5b1761"></div>
-          <div class="grid-item r2c4" style="background-color: #601762"></div>
-          <div class="grid-item r2c5" style="background-color: #651862"></div>
-          <div class="grid-item r3c1" style="background-color: #6a1862"></div>
-          <div class="grid-item r3c2" style="background-color: #6f1962"></div>
-          <div class="grid-item r3c3" style="background-color: #751963"></div>
-          <div class="grid-item r3c4" style="background-color: #7a1963"></div>
-          <div class="grid-item r3c5" style="background-color: #7f1a63"></div>
-          <div class="grid-item r4c1" style="background-color: #841a63"></div>
-          <div class="grid-item r4c2" style="background-color: #891b64"></div>
-          <div class="grid-item r4c3" style="background-color: #8e1b64"></div>
-          <div class="grid-item r4c4" style="background-color: #931c64"></div>
-          <div class="grid-item r4c5" style="background-color: #981c64"></div>
-          <div class="grid-item r5c1" style="background-color: #9d1d65"></div>
-          <div class="grid-item r5c2" style="background-color: #a21d65"></div>
-          <div class="grid-item r5c3" style="background-color: #a71e65"></div>
-          <div class="grid-item r5c4" style="background-color: #ac1e65"></div>
-          <div class="grid-item r5c5" style="background-color: #b21f66"></div>
+        <!-- Column 2 -->
+        <!-- 5 x 5 grid of empty colored divs -->
+        <div class="col two" style="background-color: transparent">
+            <div class="grid-item r1c1" style="background-color: #381460"></div>
+            <div class="grid-item r1c2" style="background-color: #3d1460"></div>
+            <div class="grid-item r1c3" style="background-color: #421460"></div>
+            <div class="grid-item r1c4" style="background-color: #471560"></div>
+            <div class="grid-item r1c5" style="background-color: #4c1561"></div>
+            <div class="grid-item r2c1" style="background-color: #511661"></div>
+            <div class="grid-item r2c2" style="background-color: #561661"></div>
+            <div class="grid-item r2c3" style="background-color: #5b1761"></div>
+            <div class="grid-item r2c4" style="background-color: #601762"></div>
+            <div class="grid-item r2c5" style="background-color: #651862"></div>
+            <div class="grid-item r3c1" style="background-color: #6a1862"></div>
+            <div class="grid-item r3c2" style="background-color: #6f1962"></div>
+            <div class="grid-item r3c3" style="background-color: #751963"></div>
+            <div class="grid-item r3c4" style="background-color: #7a1963"></div>
+            <div class="grid-item r3c5" style="background-color: #7f1a63"></div>
+            <div class="grid-item r4c1" style="background-color: #841a63"></div>
+            <div class="grid-item r4c2" style="background-color: #891b64"></div>
+            <div class="grid-item r4c3" style="background-color: #8e1b64"></div>
+            <div class="grid-item r4c4" style="background-color: #931c64"></div>
+            <div class="grid-item r4c5" style="background-color: #981c64"></div>
+            <div class="grid-item r5c1" style="background-color: #9d1d65"></div>
+            <div class="grid-item r5c2" style="background-color: #a21d65"></div>
+            <div class="grid-item r5c3" style="background-color: #a71e65"></div>
+            <div class="grid-item r5c4" style="background-color: #ac1e65"></div>
+            <div class="grid-item r5c5" style="background-color: #b21f66"></div>
         </div>
-      </div>
     </div>
-  </div>
+    <script> </script>
 </body>
 
 </html>

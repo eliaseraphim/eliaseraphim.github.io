@@ -5,478 +5,589 @@
 ***************************************************************/
 
 /*************************************************************** 
-  Color Palette
-        COLOR PALLETTE
-        #381460 rgb(56,20,96)
-        #b21f66 rgb(178,31,102)
-        #fe346e rgb(254,52,110)
-        #ffbd69 rgb(255,189,105)
+    color palette
+        primary
+            purple    | #381460 | rgb(56,20,96)
+            dark pink | #b21f66 | rgb(178,31,102)
+            hot pink  | #fe346e | rgb(254,52,110)
+            yellow    | #ffbd69 | rgb(255,189,105)
 ***************************************************************/
 
 * {
-  font-family: 'Anonymous Pro';
-  box-sizing: border-box;
+    font-family: 'Anonymous Pro';
+    box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-  width: 100%;
-  
-  margin: auto;
-  
-  overflow: auto;
+html, body {
+    margin: 0;
+    padding: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    overflow: auto;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+body > .row {
+    display: grid;
+    grid-template-rows: max(100vh, 950px);
+    grid-template-columns: max(35vw, 650px) max(65vw, 1000px);
+    justify-content: start;
 }
 
-/* ----------------------------------- INDEX ----------------------------------- */
-
-
-/* 
-  need position relative in order for content to use position absolute, since absolute is positioned
-    relative to the nearest positioned ancestor (anything not static). therefore, we need to set
-    col since it is the ancestor I wish to be relative to.
-*/
-.col {
-  position: absolute;
-  
-  height: 100vh;
-  
-  
-  border: 25px solid whitesmoke;
+body .col {
+    position: relative;
+    
+    display: grid;
+    
+    border: solid 25px;
+    border-color: whitesmoke;
 }
 
-.one {
-  left: 0px;
-  top: 0px;
-  
-  display: block;
-  
-  min-width: 650px;
-  max-width: 650px;
-  min-height: 950px;
-}
-
-.two {
-  left: 650px;
-  top: 0px;
-  
-  display: block;
-  
-  width: 65vw;
-  min-width: 300px;
-  max-width: 1250px;
-  min-height: 950px;
-}
-
-/* clear floats after the columns*/
-.index > .row:after{
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.bio > .row:after{
-  content: "";
-  display: table;
-  clear: both;
-}
+/* ---------- HIGHLIGHTS ---------- */
 
 mark.magenta_highlight {
-  color: #381460;
-  background-color: #b21f66;
-  padding-left: 15px;
+    color: #381460;
+    background-color: #b21f66;
+    padding: 2px 0px 2px 25px;
 }
 
 mark.yellow_highlight {
-  color: #b21f66;
-  background-color: #ffbd69;
-  padding: 10px 25px 10px 25px;
-  
+    color: #b21f66;
+    background-color: #ffbd69;
+    padding: 10px 25px 10px 25px;
 }
-/* -------------------- INDEX COLUMN ONE -------------------- */
 
+/* ------------------------- SIDEBAR ------------------------ */
 
+/* Setup grid for nav bar, image, and description */
+.one {
+    grid-template-rows: 80% 20%;
+    grid-template-columns: auto;
+}
 
 /* --------- INDEX COLUMN ONE | NAVIGATION -------- */
+/* dropdown bar for user navigation.*/
 
-.navigation_wrapper {
-  position: absolute;
-  
-  top: 0;
-  left: 0;
-  
-  display: block;
+/*
+    changes to make:
+        focus --> Make dropdown appear
+            need to edit it using the list items instead
+*/
+
+/* remove margin/padding and any style */
+.one ul {
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
 }
 
-.navigation_wrapper > p {
-  cursor: default;
-  
-  margin: 0;
-  
-  font-size: xx-large;
-  font-style: italic;
-  color: #ffbd69;
-  
-  padding: 15px 30px 15px 30px;
-  
-  transition: background-color 1.4s ease;
+/* set width of items in navigation bar */
+.one li {
+    width: 250px;
+}
+
+/* set to top left corner, breaks it from grid */
+
+/* list items - use padding for easy styling */
+
+.navigation_wrapper {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+}
+
+.navigation_wrapper a {
+    display: block;
+    
+    padding: 15px 30px 15px 30px;
+    
+    color: #ffbd69;
+    font-size: x-large;
+    font-style: italic;
+    text-decoration: none;
+    
+    background-color: #381460;
+    
+    transition: background-color 1.4s ease;
 }
 
 .dropdown_content {
-  overflow: hidden;
-  
-  position: absolute;
-  height: 0;
-  width: 100%;
-  
-  transition: height 1.4s ease;
+    position: absolute;
+    
+    width: 100%;
+    height: 0;
+    
+    overflow: hidden;
+    transition: height 1.4s ease;
 }
 
-.dropdown_content > a {
-  display: block;
-  
-  font-size: x-large;
-  font-style: italic;
-  color: #ffbd69;
-  text-decoration: none;
-  
-  background-color: #381460;
-  
-  padding: 10px 15px 10px 15px;
-  
-  transition: background-color 1.4s ease;
-}
-
-.dropdown_content > a:hover {
-  background-color: #fe346e;
-}
-
-.navigation_wrapper > p:hover {
-  background-color: #fe346e;
+.navigation_wrapper a:hover, .navigation_wrapper a:focus {
+    background-color: #fe346e;
+    outline: none;
 }
 
 .navigation_wrapper:hover .dropdown_content {
-  height: 250px;
+    height: 300px;
 }
 
-/* ---------- INDEX COLUMN ONE | CONTENT ---------- */
+.one > h4 {
+    position: absolute;
+    
+    margin: 0;
+    padding: 0;
+    
+    transform-origin: right;
+    transform: rotate(-90deg);
 
-/* align content container to the bottom right, float items to the right*/
-.one > .content {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+    top: 0;
+    right: 20px;
+    
+    font-size: xx-large;
 }
 
-.content > * {
-  margin-right: 10px;
-  
-  float: right;
+/* ---------------- SIDEBAR CONTENT --------------- */
+
+/* set alignment for image and text to the right side */
+.one .row {
+    text-align: end;
 }
 
-/* profile imag e*/
-.content  img {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
+/* --- cell one --- */
+/* align the image to the end of the grid cell (bottom right) */
+#photo {
+    align-self: end;
 }
 
-.content > a {
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 15px;
+/* image modification */
+#photo > img {
+    margin-right: 25px;
+    
+    width: 350px;
+    height: 350px;
 }
 
-.content > h1 {
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  
-  letter-spacing: .25em;
-  
-  font-size: xxx-large;
-  font-style: italic;
+/* --- cell two --- */
+/* set styling */
+#info > * {
+    margin-right: 25px;
+    
+    font-style: italic;
 }
 
-.content > h2 {
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 15px;
-  
-  font-size: xx-large;
-  font-style: italic;
+#info > h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    font-size: xxx-large;
+    letter-spacing: .3em;
 }
 
-/* clear floats after the headings*/
-.one::after {
-  content: "";
-  display: table;
-  clear: both;
+#info > h2 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    
+    font-size: xx-large;
+    letter-spacing: .05em;
 }
 
+/* set custom link styling */
+#info > h2 > a {
+    color: #b21f66;
+    text-decoration: none;
+}
+
+
+#info > h3 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    
+    font-size: x-large;
+    letter-spacing: .05em;
+}
 
 /* -------------------- INDEX COLUMN TWO -------------------- */
 
-/* ----------- INDEX COLUMN TWO | GRID ----------- */
-
-.index .grid_container {
-  display: grid;
-  
-  width: 100%;
-  height: 100%;
-  
-  min-width: 1150px;
-  
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-}
-
-@keyframes tileflow {
-  0%    {background-color:#381460;}
-  33%   {background-color:#b21f66;}
-  66%   {background-color:#fe346e;}
-  100%  {background-color:#ffbd69;}
+.index .two {
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 .index .grid-item {
-  display: block;
-  
-  animation-name: tileflow;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
+    animation-name: tileflow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
 }
 
+/* animation frames, transitioning through color palette */
+@keyframes tileflow {
+    0%    {background-color:#381460;}
+    33%   {background-color:#b21f66;}
+    66%   {background-color:#fe346e;}
+    100%  {background-color:#ffbd69;}
+}
 
 /* ROW 1 */
 
-.r1c1 {
-  animation-delay: 0s;
-}
-
-.r1c2 {
-  animation-delay: -.16s;
-}
-
-.r1c3 {
-  animation-delay: -.32s;
-}
-
-.r1c4 {
-  animation-delay: -.48s;
-}
-
-.r1c5 {
-  animation-delay: -.64s;
-}
+.r1c1 {animation-delay: 0s;}
+.r1c2 {animation-delay: -.16s;}
+.r1c3 {animation-delay: -.32s;}
+.r1c4 {animation-delay: -.48s;}
+.r1c5 {animation-delay: -.64s;}
 
 /* ROW 2 */
 
-.r2c1 {
-  animation-delay: -.8s;
-}
-
-.r2c2 {
-  animation-delay: -.96s;
-}
-
-.r2c3 {
-  animation-delay: -1.12s;
-}
-
-.r2c4 {
-  animation-delay: -1.28s;
-}
-
-.r2c5 {
-  animation-delay: -1.44s;
-}
+.r2c1 {animation-delay: -.8s;}
+.r2c2 {animation-delay: -.96s;}
+.r2c3 {animation-delay: -1.12s;}
+.r2c4 {animation-delay: -1.28s;}
+.r2c5 {animation-delay: -1.44s;}
 
 /* ROW 3 */
 
-.r3c1 {
-  animation-delay: -1.6s;
-}
-
-.r3c2 {
-  animation-delay: -1.76s;
-}
-
-.r3c3 {
-  animation-delay: -1.92s;
-}
-
-.r3c4 {
-  animation-delay: -2.08s;
-}
-
-.r3c5 {
-  animation-delay: -2.24s;
-}
+.r3c1 {animation-delay: -1.6s;}
+.r3c2 {animation-delay: -1.76s;}
+.r3c3 {animation-delay: -1.92s;}
+.r3c4 {animation-delay: -2.08s;}
+.r3c5 {animation-delay: -2.24s;}
 
 /* ROW 4 */
 
-.r4c1 {
-  animation-delay: -2.4s;
-}
-
-.r4c2 {
-  animation-delay: -2.56s;
-}
-
-.r4c3 {
-  animation-delay: -2.72s;
-}
-
-.r4c4 {
-  animation-delay: -2.88s;
-}
-
-.r4c5 {
-  animation-delay: -3.04s;
-}
+.r4c1 {animation-delay: -2.4s;}
+.r4c2 {animation-delay: -2.56s;}
+.r4c3 {animation-delay: -2.72s;}
+.r4c4 {animation-delay: -2.88s;}
+.r4c5 {animation-delay: -3.04s;}
 
 /* ROW 5 */
 
-.r5c1 {
-  animation-delay: -3.2s;
+.r5c1 {animation-delay: -3.2s;}
+.r5c2 {animation-delay: -3.36s;}
+.r5c3 {animation-delay: -3.52s;}
+.r5c4 {animation-delay: -3.68s;}
+.r5c5 {animation-delay: -3.84s;}
+
+/* -------------------- BIO COLUMN TWO -------------------- */
+
+.about .two {
+    grid-template-rows: 625px 625px 650px 650px 650px;
+    grid-template-columns: auto;
+    
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-.r5c2 {
-  animation-delay: -3.36s;
+.two .row {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    place-items: start;
 }
 
-.r5c3 {
-  animation-delay: -3.52s;
+/* ---------- about grid ---------- */
+
+.rect {
+    width: 100%;
+    height: 100%;
+    
+    overflow: hidden;
+    
+    animation-name: tileflow;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
 }
 
-.r5c4 {
-  animation-delay: -3.68s;
+#rect1 {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    z-index: 0;
 }
 
-.r5c5 {
-  animation-delay: -3.84s;
+#rect2 {
+    animation-delay: -2s;
+    
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+    z-index: 0;
 }
 
-
-/* ------------------------------------ BIO ------------------------------------ */
-
-.bio .grid_container {
-  display: grid;
-  position: relative;
-  
-  width: 100%;
-  height: 100%;
-  
-  min-width: 1150px;
-  
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50% 50%;
+#rect3 {
+    animation-delay: -4s;
+    
+    grid-row: 1 / span 2;
+    grid-column: 4 / span 3;
+    z-index: 1;
 }
 
-.bio .grid-item {
-  display: block;
+#rect4 {
+    animation-delay: -6s;
+    
+    grid-row: 1 / span 3;
+    grid-column: 7 / span 4;
+    z-index: 0;
 }
 
-#bioG1 {
-  grid-row-start: 1;
-  grid-column-start: 1;
+#rect5 {
+    animation-delay: -8s;
+    
+    grid-row: 2 / span 4;
+    grid-column: 6 / span 2;
+    z-index: 2;
 }
 
-#bioG2 {
-  grid-row-start: 1;
-  grid-column-start: span 2;
-  
-  margin-left: -75px;
-  margin-top: 200px;
+#rect6 {
+    animation-delay: -10s;
+    
+    grid-row: 3 / span 6;
+    grid-column: 8 / span 3;
+    z-index: 2;
 }
 
-#bioG3 {
-  grid-row-start: 2;
-  grid-column-start: 4;
-  
-  text-align: start;
+#rect7 {
+    animation-delay: -12s;
+    
+    grid-row: 2 / span 2;
+    grid-column: 10 / span 1;
+    z-index: 3;
 }
 
-#bioG4 {
-  grid-row-start: 2;
-  grid-column-start: span 3;
-  
-  text-align: end;
-  
-  bottom: 0;
-  
-  margin-top: 170px;
-  margin-right: 40px;
+#rect8 {
+    animation-delay: -14s;
+    
+    grid-row: 3 / span 4;
+    grid-column: 5 / span 3;
+    z-index: 1;
 }
 
-#bioG1 > div {
-  width: 60%;
-  height: calc(100% - 25px);
-
-  box-shadow: 25px 25px #381460;
-  
-  margin-top: 25px;
-  
-  overflow: visible;
+#rect9 {
+    animation-delay: -16s;
+    
+    grid-row: 5 / span 3;
+    grid-column: 7 / span 2;
+    z-index: 3;
 }
 
-#bioG1 > div > h3 {
-  position: absolute;
-  
-  top: 135px;
-  left: 50px;
-  
-  margin: 0;
-  
-  white-space: nowrap;
-  
-  font-size: xxx-large;
-  font-style: italic;
+#rect10 {
+    animation-delay: -18s;
+    
+    grid-row: 7 / span 4;
+    grid-column: 10 / span 1;
+    z-index: 3;
 }
 
-#bioG3 > div {
-  width: 60%;
-  height: calc(100% - 25px);
-
-  box-shadow: -25px -25px #381460;
+#rect11 {
+    animation-delay: -20s;
+    
+    grid-row: 8 / span 2;
+    grid-column: 8 / span 1;
+    z-index: 2;
 }
 
-#bioG3 > div > h3 {
-  position: absolute;
-  
-  bottom: 135px;
-  right: 160px;
-  
-  margin: 0;
-  
-  white-space: nowrap;
-  
-  font-size: xxx-large;
-  font-style: italic;
+#rect12 {
+    animation-delay: -22s;
+    
+    grid-row: 9 / span 1;
+    grid-column: 1 / span 1;
+    z-index: 3;
 }
 
-#bioG2 > h1 > a {
-  color: #381460;
-  
-  transition: color .8s ease;
+#rect13 {
+    animation-delay: -24s;
+    
+    grid-row: 10 / span 1;
+    grid-column: 1 / span 2;
+    z-index: 0;
 }
 
-.yellow_highlight > a {
-  color: #381460;
-  
-  transition: color .8s ease;
+#rect14 {
+    animation-delay: -26s;
+    
+    grid-row: 10 / span 1;
+    grid-column: 9 / span 1;
+    z-index: 3;
 }
 
-#bioG2 > h1 > a:hover {
-  color: #fe346e;
+#about > h1 {
+    margin: 0px 10px;
+    
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 4;
+    z-index: 3;
 }
 
-.yellow_highlight > a:hover {
-  color: #fe346e;
+#about > p {
+    margin: 0px 10px;
+    
+    grid-row: 5 / span 3;
+    grid-column: 1 / span 4;
+    z-index: 3;
+    
+    font-size: large;
+}
+
+#about > p a {
+    color: #b21f66;
+    text-decoration: none;
+}
+
+/* ---------- work grid ---------- */
+#rect15 {
+    animation-delay: -28s;
+    
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 1;
+    z-index: 0;
+}
+
+#rect16 {
+    animation-delay: -30s;
+    
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 1;
+    z-index: 1;
+}
+
+#rect17 {
+    animation-delay: -32s;
+    
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+    z-index: 0;
+}
+
+#rect18 {
+    animation-delay: -34s;
+    
+    grid-row: 1 / span 1;
+    grid-column: 8 / span 2;
+    z-index: 0;
+}
+
+#rect19 {
+    animation-delay: -36s;
+    
+    grid-row: 1 / span 2;
+    grid-column: 10 / span 1;
+    z-index: 1;
+}
+
+#rect20 {
+    animation-delay: -38s;
+    
+    grid-row: 2 / span 1;
+    grid-column: 7 / span 1;
+    z-index: 0;
+}
+
+#rect21 {
+    animation-delay: -40s;
+    
+    grid-row: 2 / span 2;
+    grid-column: 9 / span 2;
+    z-index: 0;
+}
+
+#rect22 {
+    animation-delay: -42s;
+    
+    grid-row: 3 / span 2;
+    grid-column: 8 / span 2;
+    z-index: 1;
+}
+
+#rect23 {
+    animation-delay: -44s;
+    
+    grid-row: 4 / span 3;
+    grid-column: 1 / span 2;
+    z-index: 0;
+}
+
+#rect24 {
+    animation-delay: -46s;
+    
+    grid-row: 6 / span 1;
+    grid-column: 9 / span 1;
+    z-index: 1;
+}
+
+#rect25 {
+    animation-delay: -48s;
+    
+    grid-row: 4 / span 4;
+    grid-column: 9 / span 2;
+    z-index: 0;
+}
+
+#rect26 {
+    animation-delay: -50s;
+    
+    grid-row: 5 / span 5;
+    grid-column: 2 / span 1;
+    z-index: 0;
+}
+
+#rect27 {
+    animation-delay: -52s;
+    
+    grid-row: 9 / span 2;
+    grid-column: 4 / span 2;
+    z-index: 0;
+}
+
+#rect28 {
+    animation-delay: -54s;
+    
+    grid-row: 8 / span 1;
+    grid-column: 1 / span 2;
+    z-index: 0;
+}
+
+#rect29 {
+    animation-delay: -56s;
+    
+    grid-row: 9 / span 2;
+    grid-column: 9 / span 1;
+    z-index: 1;
+}
+
+#rect30 {
+    animation-delay: -58s;
+    
+    grid-row: 10 / span 1;
+    grid-column: 1 / span 1;
+    z-index: 0;
+}
+
+#rect31 {
+    animation-delay: -60s;
+    
+    grid-row: 10 / span 1;
+    grid-column: 8 / span 3;
+    z-index: 0;
+}
+
+#work > h1 {
+    margin: 0;
+    
+    grid-row: 4 / span 1;
+    grid-column: 4 / span 2;
+    
+    z-index: 3;
+}
+
+#work > p {
+    margin: 15px 65px;
+    
+    grid-row: 5 / span 4;
+    grid-column: 3 / span 6;
+    
+    z-index: 3;
 }
