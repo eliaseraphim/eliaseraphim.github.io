@@ -1,0 +1,74 @@
+:root {
+    /* original */
+    --purple: #381460;
+    --dark-pink: #b21f66;
+    --hot-pink: #fe346e;
+    --yellow: #ffbd69;
+
+    /* sunset */
+    --s-sand: #EAAC8B;
+    --s-red: #E56B6F;
+    --s-grape: #B56576;
+    --s-purple: #6D597A;
+    --s-blue: #355070;
+
+    /* sunset full */
+    --sf-black: #001219;
+    --sf-dark-blue: #005F73;
+    --sf-blue: #0A9396;
+    --sf-light-blue: #94D2BD;
+    --sf-sand: #E9D8A6;
+    --sf-yellow: #EE9B00;
+    --sf-orange: #CA6702;
+    --sf-vermillion: #BB3E03;
+    --sf-red: #AE2012;
+    --sf-dark-red: #9B2226;
+}
+
+.my-data {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    margin-left: 15px;
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.my-data img {
+    height: 150px;
+    width: 150px;
+
+    border-radius: 75px;
+}
+
+.my-data h1 {
+    letter-spacing: .25em;
+}
+
+.my-data p {
+    letter-spacing: .25em;
+}
+
+.path {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.path p {
+    margin: 0;
+    padding: 0;
+}
+
+/* index */
+.project-header {
+    text-align: center;
+}
+
