@@ -5,7 +5,7 @@
 -->
 
 <!DOCTYPE html>
-<html lang='en'>
+<html class='full-height' lang='en'>
 <head>
     <!-- metadata -->
     <meta charset='UTF-8'>
@@ -21,8 +21,8 @@
     <!-- fonts -->
 
 </head>
-<body style='background-color: #EAAC8B;'>
-<div class='container-fluid vh-100 d-flex flex-column'>
+<body class='full-height' style='background-color: #EAAC8B;'>
+<div class='container-fluid full-height'>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -51,58 +51,52 @@
         </div>
     </nav>
 
-    <!-- content -->
-    <div class='container mt-3'>
-        <div class='row row-cols-2'>
-            <div class='col-4'>
-                <h1>Welcome</h1>
-                <h2>My name is Elia Deppe</h2>
+    <!-- index -->
+    <div class='row fill-height'>
+        <!-- sidebar -->
+        <div class='col-3 my-data'>
+                <img src='img/avatar.png' alt='Icon by SAPGOON. Picrewの「character」でつくったよ！ https://picrew.me/share?cd=vcQauzSoob #Picrew #character'>
+                <h1 class='m-0 p-0'>elia deppe</h1>
+        </div>
+        <!-- content -->
+        <div class='col'>
+            <div class='row-2'>
+                <div class='col-4'>
+                    <h1>Welcome</h1>
+                    <h2>My name is Elia Deppe</h2>
+                </div>
+                <div class='col-8'>
+                    <p>
+                        I am an in-school and out-of-school instructor for the non-profit Code in the Schools. I am a
+                        hobbyist developer focused on computational number theory, game design, app development, web
+                        development, and information security. I also like to create illustrations, paintings, collages,
+                        and music.
+                    </p>
+                </div>
+                <div class='col-12'>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ipsum maximus, vulputate enim vitae, ultrices mauris. Vivamus magna est, scelerisque ut lectus sit amet, dapibus viverra sapien. Nulla aliquet posuere nisl, id placerat eros auctor ac. Nam imperdiet libero eu dui dapibus blandit. Nulla facilisi. Fusce iaculis nisi sit amet lectus tincidunt eleifend. Ut consequat volutpat sapien ut facilisis. Aliquam eleifend, lectus non bibendum scelerisque, purus nunc commodo nisl, at sodales ipsum ante a ante.</p>
+                </div>
             </div>
-            <div class='col-8'>
-                <p>
-                    I am an in-school and out-of-school instructor for the non-profit Code in the Schools. I am a
-                    hobbyist developer focused on computational number theory, game design, app development, web
-                    development, and information security. I also like to create illustrations, paintings, collages,
-                    and music.
-                </p>
-            </div>
-            <div class='col-12'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ipsum maximus, vulputate enim vitae, ultrices mauris. Vivamus magna est, scelerisque ut lectus sit amet, dapibus viverra sapien. Nulla aliquet posuere nisl, id placerat eros auctor ac. Nam imperdiet libero eu dui dapibus blandit. Nulla facilisi. Fusce iaculis nisi sit amet lectus tincidunt eleifend. Ut consequat volutpat sapien ut facilisis. Aliquam eleifend, lectus non bibendum scelerisque, purus nunc commodo nisl, at sodales ipsum ante a ante.</p>
+            <h2 class='text-center'>Projects</h2>
+            <div class='row'>
+                <div class='row'>
+                    <h3 class='text-center'>Software Development</h3>
+                    <h4>Featured Project - <span>Project Title</span></h4>
+                    <a>Github Repository</a>
+                    <p>Content</p>
+                </div>
+                <div class='row'>
+                    <h3 class='text-center'>Artwork</h3>
+                    <h4>Illustration</h4>
+                    <h4>Painting</h4>
+                    <h4>Collage</h4>
+                </div>
+                <div class='row'>
+                    <h3 class='text-center'>Music</h3>
+                    <p class='text-center'>Coming soon...</p>
+                </div>
             </div>
         </div>
-        <h2 class='text-center'>Projects</h2>
-        <div class='row'>
-            <div class='row'>
-                <h3 class='text-center'>Software Development</h3>
-                <h4>Featured Project - <span>Project Title</span></h4>
-                <a>Github Repository</a>
-                <p>Content</p>
-            </div>
-            <div class='row'>
-                <h3 class='text-center'>Artwork</h3>
-                <h4>Illustration</h4>
-                <h4>Painting</h4>
-                <h4>Collage</h4>
-            </div>
-            <div class='row'>
-                <h3 class='text-center'>Music</h3>
-                <p class='text-center'>Coming soon...</p>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- footer -->
-    <footer class='my-data'>
-        <img src='img/avatar.png' alt='Icon by SAPGOON. Picrewの「character」でつくったよ！ https://picrew.me/share?cd=vcQauzSoob #Picrew #character'>
-        <h1 class='m-0 p-0'>elia deppe</h1>
-        <p class='mt-1 mb-0 fs-4'>instructor / developer / artist</p>
-    </footer>
-
-    <!-- current path -->
-    <div class='path'>
-        <p><mark class='py-0 path-highlight'>./index.html</mark></p>
     </div>
 </div>
 <script src='js/bootstrap.js'></script>

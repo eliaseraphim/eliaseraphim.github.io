@@ -25,20 +25,27 @@
     --sf-dark-red: #9B2226;
 }
 
-.my-data {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.full-height {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
-    margin-left: 15px;
+.fill-height {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.my-data {
+    margin-top: 15px;
     margin-bottom: 15px;
 
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: flex-start;
-    align-content: flex-start;
+    align-content: stretch;
 }
 
 .my-data img {
@@ -54,17 +61,6 @@
 
 .my-data p {
     letter-spacing: .25em;
-}
-
-.path {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
-.path p {
-    margin: 0;
-    padding: 0;
 }
 
 /* index */
