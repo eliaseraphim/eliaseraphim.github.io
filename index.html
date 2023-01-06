@@ -5,7 +5,7 @@
 -->
 
 <!DOCTYPE html>
-<html class='full-height' lang='en'>
+<html lang='en'>
 <head>
     <!-- metadata -->
     <meta charset='UTF-8'>
@@ -20,85 +20,91 @@
 
     <!-- fonts -->
 
-</head>
-<body class='full-height' style='background-color: #EAAC8B;'>
-<div class='container-fluid full-height'>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-3">
-                    <li class="nav-item pe-3">
-                        <a class="nav-link active" aria-current="page" href="#">/index</a>
-                    </li>
-                    <li class="nav-item pe-3">
-                        <a class="nav-link" href="#">/about</a>
-                    </li>
-                    <li class="nav-item pe-3">
-                        <a class="nav-link" href="#">/programming</a>
-                    </li>
-                    <li class="nav-item pe-3">
-                        <a class="nav-link" href="#">/artwork</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">/music</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- index -->
-    <div class='row fill-height'>
-        <!-- sidebar -->
-        <div class='col-3 my-data'>
-                <img src='img/avatar.png' alt='Icon by SAPGOON. Picrewの「character」でつくったよ！ https://picrew.me/share?cd=vcQauzSoob #Picrew #character'>
-                <h1 class='m-0 p-0'>elia deppe</h1>
-        </div>
-        <!-- content -->
-        <div class='col'>
-            <div class='row-2'>
-                <div class='col-4'>
-                    <h1>Welcome</h1>
-                    <h2>My name is Elia Deppe</h2>
-                </div>
-                <div class='col-8'>
-                    <p>
-                        I am an in-school and out-of-school instructor for the non-profit Code in the Schools. I am a
-                        hobbyist developer focused on computational number theory, game design, app development, web
-                        development, and information security. I also like to create illustrations, paintings, collages,
-                        and music.
-                    </p>
-                </div>
-                <div class='col-12'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ipsum maximus, vulputate enim vitae, ultrices mauris. Vivamus magna est, scelerisque ut lectus sit amet, dapibus viverra sapien. Nulla aliquet posuere nisl, id placerat eros auctor ac. Nam imperdiet libero eu dui dapibus blandit. Nulla facilisi. Fusce iaculis nisi sit amet lectus tincidunt eleifend. Ut consequat volutpat sapien ut facilisis. Aliquam eleifend, lectus non bibendum scelerisque, purus nunc commodo nisl, at sodales ipsum ante a ante.</p>
-                </div>
+</head>
+<body class='full-height' style='background-color: var(--s-sand);'>
+    <div class="container-fluid full-height">
+        <div class="row">
+            <div class="col-3 text-start sidebar d-none d-md-block">
+                <img src="./img/work-avatar.png" class="avatar h-auto img-fluid"
+                     alt="A pale girl with long brown hair drawn in a chalky cartoonish style.
+                     Is wearing a pink jacket, and a small sprout appears from their head.">
+                <header>elia deppe</header>
+                <address>elia.deppe7@gmail.com</address>
+                <nav class="nav flex-column">
+                    <a href="#" aria-current="page" class="nav-link"><img src="./img/icons/house-fill.svg"> Index</a>
+                    <a href="#" class="nav-link"><img src="./img/icons/person-fill.svg"> About</a>
+                    <a href="#" class="nav-link"><img src="./img/icons/file-text-fill.svg"> Tutorials</a>
+                </nav>
+                <p>Web Developer for <a href="https://www.imsweb.com/">IMS, Inc.</a></p>
+                <a href="https://github.com/eliaseraphim" class="icon-link link-no-style">
+                    <img src="./img/icons/github.svg" class="link-icon h-auto img-fluid" id="github-icon-link"
+                         alt="Github Icon. A transparent cat, with a black circle behind it.">
+                </a>
+                <a href="https://www.linkedin.com/in/elia-deppe-aa402a121/" class="icon-link link-no-style">
+                    <img src="./img/icons/linkedin.svg" class="link-icon h-auto img-fluid" id="linkedin-icon-link"
+                         alt="LinkedIn Icon. Transparent bold letters 'in', with a black rounded square behind it.">
+                </a>
+                <footer>Avatar created by <a href="https://sapgoon.carrd.co/">@SAPGOON</a></footer>
+                <footer>Icons by <a href="https://getbootstrap.com/">Bootstrap</a></footer>
             </div>
-            <h2 class='text-center'>Projects</h2>
-            <div class='row'>
-                <div class='row'>
-                    <h3 class='text-center'>Software Development</h3>
-                    <h4>Featured Project - <span>Project Title</span></h4>
-                    <a>Github Repository</a>
-                    <p>Content</p>
+            <div class="col-12 col-md-9">
+                <div class="d-block d-md-none">
+                    <nav class="nav">
+                        <a href="#" aria-current="page" class="nav-link"><img src="./img/icons/house-fill.svg"> Index</a>
+                        <a href="#" class="nav-link"><img src="./img/icons/person-fill.svg"> About</a>
+                        <a href="#" class="nav-link"><img src="./img/icons/file-text-fill.svg"> Tutorials</a>
+                    </nav>
                 </div>
-                <div class='row'>
-                    <h3 class='text-center'>Artwork</h3>
-                    <h4>Illustration</h4>
-                    <h4>Painting</h4>
-                    <h4>Collage</h4>
-                </div>
-                <div class='row'>
-                    <h3 class='text-center'>Music</h3>
-                    <p class='text-center'>Coming soon...</p>
+                <h1>hello</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Et magnis dis parturient montes nascetur ridiculus. Pellentesque
+                    pulvinar pellentesque habitant morbi tristique senectus et. Faucibus purus in massa tempor.
+                    Viverra justo nec ultrices dui sapien. In eu mi bibendum neque egestas. Consectetur purus ut
+                    faucibus pulvinar elementum integer enim. Id diam maecenas ultricies mi eget mauris pharetra et
+                    ultrices. Placerat orci nulla pellentesque dignissim enim sit amet. Elementum eu facilisis sed
+                    odio morbi quis commodo odio aenean. Sit amet luctus venenatis lectus magna fringilla.
+                </p>
+                <div>
+                    <h1>Projects</h1>
+                    <div>
+                        <h2>
+                            <a href="https://github.com/eliaseraphim/eliaseraphim.github.io" class="link-project-style">
+                                eliaseraphim.github.io
+                            </a>
+                        </h2>
+                        <p>Personal portfolio website. You're looking at it!</p>
+                        <p>Built using HTML/CSS/JS.</p>
+                        <p>Packages</p>
+                        <ul>
+                            <li>Bootstrap v5.2.0</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>
+                            <a href="https://github.com/eliaseraphim/blog" class="link-project-style">
+                                blog
+                            </a>
+                        </h2>
+                        <p>Personal blog, made for fun.</p>
+                        <p>Features</p>
+                        <ul>
+                            <li>Create, edit, and delete posts.</li>
+                            <li>Attach images to posts.</li>
+                        </ul>
+                        <p>Packages</p>
+                        <ul>
+                            <li>Django v4.1.4 (and dependencies)</li>
+                            <li>Pillow v9.3.0 (and dependencies)</li>
+                            <li>Bootstrap v5.2.0</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<script src='js/bootstrap.js'></script>
+    <!-- scripts -->
+    <script src='js/bootstrap.js' type="text/javascript"></script>
 </body>
 </html>
