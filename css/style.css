@@ -48,7 +48,7 @@ body {
 
 /* sidebar */
 .sidebar .avatar {
-    width: 250px;
+    width: 400px;
 }
 
 .sidebar .icon-link {
@@ -56,6 +56,6 @@ body {
 }
 
 .sidebar .link-icon {
-    width: 50px;
+    width: 25px;
     min-width: 15px;
 }

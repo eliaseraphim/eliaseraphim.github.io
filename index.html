@@ -29,51 +29,82 @@
 
 </head>
 <body class='full-height' style='background-color: var(--s-sand);'>
-    <div class="container-fluid full-height">
+    <div class="container-fluid py-2">
         <div class="row">
-            <div class="col-3 text-start sidebar d-none d-md-block">
+            <!-- sidebar -->
+            <div class="col-3 text-start sidebar d-none d-lg-block position-fixed">
+                <!-- contact information -->
                 <img src="./img/work-avatar.png" class="avatar h-auto img-fluid"
                      alt="A pale girl with long brown hair drawn in a chalky cartoonish style.
                      Is wearing a pink jacket, and a small sprout appears from their head.">
                 <header>elia deppe</header>
-                <address>elia.deppe7@gmail.com</address>
+                <!-- navigation -->
                 <nav class="nav flex-column">
-                    <a href="#" aria-current="page" class="nav-link"><img src="./img/icons/house-fill.svg"> Index</a>
-                    <a href="#" class="nav-link"><img src="./img/icons/person-fill.svg"> About</a>
-                    <a href="#" class="nav-link"><img src="./img/icons/file-text-fill.svg"> Tutorials</a>
+                    <a href="#" aria-current="page" class="nav-link">
+                        <img src="./img/icons/house-fill.svg" alt="Small house icon in black."> ./index.html
+                    </a>
+                    <a href="#" class="nav-link">
+                        <img src="./img/icons/person-fill.svg" alt="Small person icon in black."> ./about.html
+                    </a>
+                    <!-- TODO: make drop down -->
+                    <a href="#" class="nav-link">
+                        <img src="./img/icons/file-text-fill.svg" alt="Small book icon in black."> ./education
+                    </a>
                 </nav>
+
+                <!-- work and contact information -->
                 <p>Web Developer for <a href="https://www.imsweb.com/">IMS, Inc.</a></p>
-                <a href="https://github.com/eliaseraphim" class="icon-link link-no-style">
-                    <img src="./img/icons/github.svg" class="link-icon h-auto img-fluid" id="github-icon-link"
-                         alt="Github Icon. A transparent cat, with a black circle behind it.">
-                </a>
-                <a href="https://www.linkedin.com/in/elia-deppe-aa402a121/" class="icon-link link-no-style">
-                    <img src="./img/icons/linkedin.svg" class="link-icon h-auto img-fluid" id="linkedin-icon-link"
-                         alt="LinkedIn Icon. Transparent bold letters 'in', with a black rounded square behind it.">
-                </a>
+                <address class="ps-2">
+                    <img src="./img/icons/envelope-fill.svg" class="link-icon img-fluid" id="email-icon"
+                         alt="An envelope in black, with transparent outlines."> elia.deppe7@gmail.com
+                </address>
+                <address class="ps-2">
+                    <a href="https://github.com/eliaseraphim" class="icon-link link-no-style">
+                        <img src="./img/icons/github.svg" class="link-icon img-fluid" id="github-icon-link"
+                             alt="Github Icon. A transparent cat, with a black circle behind it."> eliaseraphim
+                    </a>
+                </address>
+                <address class="ps-2">
+                    <a href="https://www.linkedin.com/in/elia-deppe-aa402a121/" class="icon-link link-no-style">
+                        <img src="./img/icons/linkedin.svg" class="link-icon h-auto img-fluid" id="linkedin-icon-link"
+                             alt="LinkedIn Icon. Transparent bold letters 'in', with a black rounded square behind it."> elia deppe
+                    </a>
+                </address>
+
+                <!-- accreditations -->
                 <footer>Avatar created by <a href="https://sapgoon.carrd.co/">@SAPGOON</a></footer>
                 <footer>Icons by <a href="https://getbootstrap.com/">Bootstrap</a></footer>
             </div>
-            <div class="col-12 col-md-9">
-                <div class="d-block d-md-none">
+
+            <!-- page -->
+            <div class="col-12 col-lg-9 offset-lg-3">
+                <!-- navigation -->
+                <div class="d-block d-lg-none">
                     <nav class="nav">
-                        <a href="#" aria-current="page" class="nav-link"><img src="./img/icons/house-fill.svg"> Index</a>
-                        <a href="#" class="nav-link"><img src="./img/icons/person-fill.svg"> About</a>
-                        <a href="#" class="nav-link"><img src="./img/icons/file-text-fill.svg"> Tutorials</a>
+                        <a href="#" aria-current="page" class="nav-link">
+                            <img src="./img/icons/house-fill.svg" alt="Small house icon in black."> ./index.html
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="./img/icons/person-fill.svg" alt="Small person icon in black."> ./about.html
+                        </a>
+                        <!-- TODO: make drop down -->
+                        <a href="#" class="nav-link">
+                            <img src="./img/icons/file-text-fill.svg" alt="Small book icon in black."> ./education
+                        </a>
                     </nav>
                 </div>
-                <h1>hello</h1>
+
+                <!-- introduction -->
+                <h1>hello, my name is elia deppe</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Et magnis dis parturient montes nascetur ridiculus. Pellentesque
-                    pulvinar pellentesque habitant morbi tristique senectus et. Faucibus purus in massa tempor.
-                    Viverra justo nec ultrices dui sapien. In eu mi bibendum neque egestas. Consectetur purus ut
-                    faucibus pulvinar elementum integer enim. Id diam maecenas ultricies mi eget mauris pharetra et
-                    ultrices. Placerat orci nulla pellentesque dignissim enim sit amet. Elementum eu facilisis sed
-                    odio morbi quis commodo odio aenean. Sit amet luctus venenatis lectus magna fringilla.
+                    web and python developer. formerly an educator for
                 </p>
+
+                <!-- projects -->
                 <div>
                     <h1>Projects</h1>
+
+                    <!-- eliaseraphim.github.io -->
                     <div>
                         <h2>
                             <a href="https://github.com/eliaseraphim/eliaseraphim.github.io" class="link-project-style">
@@ -87,6 +118,8 @@
                             <li>Bootstrap v5.2.0</li>
                         </ul>
                     </div>
+
+                    <!-- blog -->
                     <div>
                         <h2>
                             <a href="https://github.com/eliaseraphim/blog" class="link-project-style">
