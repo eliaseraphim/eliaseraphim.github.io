@@ -38,14 +38,6 @@ body {
     text-decoration: inherit;
 }
 
-.link-project-style,
-.link-project-style:link,
-.link-project-style:hover,
-.link-project-style:visited {
-    color: var(--s-red);
-    text-decoration: inherit;
-}
-
 /* sidebar */
 .sidebar .avatar {
     width: 400px;
