@@ -39,7 +39,7 @@ a:visited {
 
 /* sidebar */
 .sidebar .avatar {
-    width: 400px;
+    border-radius: 500px;
 }
 
 .sidebar .icon-link {
@@ -53,4 +53,9 @@ a:visited {
 
 .sidebar button {
     padding: 0px 10px 4px;
+}
+
+.navbar-brand img {
+    height: 75px;
+    border-radius: 75px;
 }
