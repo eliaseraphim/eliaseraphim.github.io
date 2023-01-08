@@ -1,32 +1,15 @@
 :root {
-    /* original */
-    --purple: #381460;
-    --dark-pink: #b21f66;
-    --hot-pink: #fe346e;
-    --yellow: #ffbd69;
-
-    /* sunset */
-    --s-sand: #EAAC8B;
-    --s-red: #E56B6F;
-    --s-grape: #B56576;
-    --s-purple: #6D597A;
-    --s-blue: #355070;
-
-    /* sunset full */
-    --sf-black: #001219;
-    --sf-dark-blue: #005F73;
-    --sf-blue: #0A9396;
-    --sf-light-blue: #94D2BD;
-    --sf-sand: #E9D8A6;
-    --sf-yellow: #EE9B00;
-    --sf-orange: #CA6702;
-    --sf-vermillion: #BB3E03;
-    --sf-red: #AE2012;
-    --sf-dark-red: #9B2226;
+    --light-shade: #619b8a;
+    --light-accent: #a1c181;
+    --brand-color: #fcca46;
+    --dark-accent: #fe7f2d;
+    --dark-shade: #233d4d;
 }
 
 /* universal rules */
 body {
+    background-color: var(--dark-shade);
+    color: var(--light-shade);
     font-family: "Cascadia Mono light", monospace;
 }
 
@@ -34,7 +17,12 @@ a,
 a:link,
 a:hover,
 a:visited {
+    color: var(--light-accent);
     text-decoration: none;
+}
+
+h1 {
+    color: var(--brand-color);
 }
 
 /* sidebar */
@@ -42,20 +30,25 @@ a:visited {
     border-radius: 500px;
 }
 
-.sidebar .icon-link {
-    display: inline-block;
-}
-
 .sidebar .link-icon {
-    width: 20px;
-    min-width: 15px;
+    width: 25px;
+    min-width: 20px;
 }
 
-.sidebar button {
+.sidebar .copy-btn {
     padding: 0px 10px 4px;
 }
 
+/* navbar */
 .navbar-brand img {
     height: 75px;
     border-radius: 75px;
+}
+
+/* projects */
+a.project-repo,
+a.project-repo:link,
+a.project-repo:hover,
+a.project-repo:visited {
+    color: var(--dark-accent);
 }
