@@ -27,15 +27,14 @@
 
 /* universal rules */
 body {
-    font-family: "Cascadia Mono Light", monospace;
+    font-family: "Cascadia Mono light", monospace;
 }
 
-.link-no-style,
-.link-no-style:link,
-.link-no-style:hover,
-.link-no-style:visited {
-    color: inherit;
-    text-decoration: inherit;
+a,
+a:link,
+a:hover,
+a:visited {
+    text-decoration: none;
 }
 
 /* sidebar */
@@ -48,6 +47,10 @@ body {
 }
 
 .sidebar .link-icon {
-    width: 25px;
+    width: 20px;
     min-width: 15px;
+}
+
+.sidebar button {
+    padding: 0px 10px 4px;
 }
