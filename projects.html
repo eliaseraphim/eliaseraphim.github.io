@@ -20,6 +20,7 @@
         <link href='static/css/style.css' rel='stylesheet'>
 
         <!-- fonts -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
         <!-- favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon_io/apple-touch-icon.png">
@@ -43,41 +44,37 @@
                 <img src="static/img/work-avatar.png" class="avatar h-auto img-fluid"
                      alt="A pale girl with long brown hair drawn in a chalky cartoonish style. Is wearing a pink jacket, and a small sprout appears from their head.">
                 <h1>Elia Deppe</h1>
+                <p>she / her</p>
                 <br>
 
                 <!-- work and contact information -->
                 <h2>Contact</h2>
                 <div class="ps-xxl-4 ps-xl-3 ps-lg-2">
                     <address>
-                        <img src="static/img/icons/envelope-fill.svg" class="link-icon img-fluid"
-                             alt="An envelope in black, with transparent outlines."> <span id="personal-email">elia.deppe7@gmail.com</span>
-                        <button type="button" class="btn btn-secondary copy-btn" onclick="copyPersonalEmail(`personal-email`)">
-                            <img src="static/img/icons/clipboard-plus.svg" alt="An outline of a clipboard, with rounded corners, and a plus symbol in the middle.">
+                        <i class="bi-envelope-fill"></i> <span id="personal-email">elia.deppe7@gmail.com</span>
+                        <button type="button" class="btn btn-light copy-btn" onclick="copyPersonalEmail(`personal-email`)">
+                            <i class="bi-clipboard-plus"></i>
                         </button>
                     </address>
                     <address>
-                        <img src="static/img/icons/envelope-fill.svg" class="link-icon img-fluid"
-                             alt="An envelope in black, with transparent outlines."> <span id="work-email">deppee@imsweb.com</span>
-                        <button type="button" class="btn btn-secondary copy-btn" onclick="copyPersonalEmail(`work-email`)">
-                            <img src="static/img/icons/clipboard-plus.svg" alt="An outline of a clipboard, with rounded corners, and a plus symbol in the middle.">
+                        <i class='bi-envelope-fill'></i> <span id="work-email">deppee@imsweb.com</span>
+                        <button type="button" class="btn btn-light copy-btn" onclick="copyPersonalEmail(`work-email`)">
+                            <i class="bi-clipboard-plus"></i>
                         </button>
                     </address>
                     <address>
                         <a href="https://github.com/eliaseraphim" target="_blank">
-                            <img src="static/img/icons/github.svg" class="link-icon img-fluid"
-                                 alt="Github Icon. A transparent cat, with a black circle behind it."> eliaseraphim
+                            <i class="bi-github"></i> eliaseraphim
                         </a>
                     </address>
                     <address>
                         <a href="https://stackoverflow.com/users/11713970/eliaseraphim" target="_blank">
-                            <img src="static/img/icons/stack-overflow.svg" class="link-icon img-fluid"
-                                 alt="Stack Overflow icon."> eliaseraphim
+                            <i class="bi-stack-overflow"></i> eliaseraphim
                         </a>
                     </address>
                     <address>
                         <a href="https://www.linkedin.com/in/elia-deppe-aa402a121/" target="_blank">
-                            <img src="static/img/icons/linkedin.svg" class="link-icon h-auto img-fluid"
-                                 alt="LinkedIn Icon. Transparent bold letters 'in', with a black rounded square behind it."> elia deppe
+                            <i class="bi-linkedin"></i> elia deppe
                         </a>
                     </address>
                 </div>
@@ -108,29 +105,28 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a href="#" aria-current="page" class="nav-link">
-                                        <img src="static/img/icons/house-fill.svg" alt="Small house icon in black."> Home
+                                    <a href="./index.html" aria-current="page" class="nav-link">
+                                        <i class="bi-house-fill"></i> Home
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <img src="static/img/icons/person-fill.svg" alt="Small person icon in black."> About
+                                    <a href="./about.html" class="nav-link">
+                                        <i class="bi-person-fill"></i> About
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <img src="static/img/icons/person-fill.svg" alt="Small person icon in black."> Projects
+                                    <a href="./projects.html" class="nav-link">
+                                        <i class="bi-file-code-fill"></i> Projects
                                     </a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button"
                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="static/img/icons/file-text-fill.svg"
-                                             alt="Small book icon in black."> Education
+                                        <i class="bi-file-text-fill"></i> Education
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Django Blog</a></li>
-                                        <li><a class="dropdown-item" href="#">Django Music App</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi-file-richtext-fill"></i> Django Blog</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi-file-music-fill"></i> Django Music App</a></li>
                                     </ul>
                                 </li>
                             </ul>
